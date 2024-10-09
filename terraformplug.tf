@@ -2,11 +2,13 @@ Steps to Create a Terraform Plugin and Integrate It with GitHub
 1. Set Up a Go Project for Your Terraform Plugin
 First, create a new directory for your Terraform plugin.
 bash
+
 Copy code
 mkdir terraform-provider-example
 cd terraform-provider-example
 Initialize a new Go module for your plugin.
 bash
+
 Copy code
 go mod init github.com/yourusername/terraform-provider-example
 2. Basic Plugin Structure
@@ -204,13 +206,4 @@ jobs:
       run: go test ./...
 This workflow will automatically build and test your provider every time you push new changes to GitHub.
 
-7. Release the Plugin (Optional)
-To make it easier for others to use your provider, you can create a GitHub Release. Navigate to the "Releases" section of your repository and create a new release, attaching your compiled binary.
 
-Summary:
-Set up the project using Go and Terraform Plugin SDK.
-Write the plugin code with provider and resources.
-Build the plugin locally using Go.
-Test the plugin with Terraform.
-Push the code to GitHub and optionally set up CI with GitHub Actions.
-Release the plugin if desired.
